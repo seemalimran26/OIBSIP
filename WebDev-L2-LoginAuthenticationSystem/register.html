@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="auth-page">
+        <!-- Decorative Background -->
+        <div class="bg-shape shape-one"></div>
+        <div class="bg-shape shape-two"></div>
+        <section class="auth-wrapper">
+            <!-- Left Side -->
+            <div class="auth-intro">
+                <div class="brand">
+                    <div class="brand-icon">A</div>
+                    <span>Authify</span>
+                </div>
+                <div class="intro-content">
+                    <span class="eyebrow">START YOUR JOURNEY</span>
+                    <h1>
+                        Create your account
+                        <span>and get started.</span>
+                    </h1>
+                    <p>
+                        Join our platform and enjoy a simple, secure
+                        and personalized experience.
+                    </p>
+                    <div class="feature-list">
+                        <div class="feature">
+                            <div class="feature-icon">✓</div>
+                            <div>
+                                <strong>Simple & Secure</strong>
+                                <span>Your account is protected.</span>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">✓</div>
+                            <div>
+                                <strong>Easy Access</strong>
+                                <span>Access your account anytime.</span>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">✓</div>
+                            <div>
+                                <strong>Personal Dashboard</strong>
+                                <span>Manage everything in one place.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="copyright">© 2026 Authify. All rights reserved.</p>
+            </div>
+            <!-- Register Card -->
+            <div class="auth-card">
+                <div class="mobile-brand">
+                    <div class="brand-icon">A</div>
+                    <span>Authify</span>
+                </div>
+                <div class="form-header">
+                    <h2>Create Account</h2>
+                    <p>Enter your details to create a new account.</p>
+                </div>
+                <form id="registerForm">
+                    <div class="form-group">
+                        <label for="registerName">Full Name</label>
+                        <div class="input-wrapper">
+                            <input type="text" id="registerName" placeholder="Enter your full name" autocomplete="name">
+                        </div>
+                        <small class="field-error" id="nameError"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerUsername">Username</label>
+                        <div class="input-wrapper">
+                            <input type="text" id="registerUsername" placeholder="Choose a username"
+                                autocomplete="username">
+                        </div>
+                        <small class="field-error" id="usernameError"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerEmail">Email Address</label>
+                        <div class="input-wrapper">
+                            <input type="email" id="registerEmail" placeholder="you@example.com" autocomplete="email">
+                        </div>
+                        <small class="field-error" id="emailError"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerPassword">Password</label>
+                        <div class="input-wrapper">
+                            <input type="password" id="registerPassword" placeholder="Create a strong password"
+                                autocomplete="new-password">
+                            <button type="button" class="password-toggle" data-target="registerPassword">
+                                Show
+                            </button>
+                        </div>
+                        <div class="password-strength">
+                            <div class="strength-bar">
+                                <span id="strengthBar"></span>
+                            </div>
+                            <small class="password-hint">
+                                Must be at least 8 characters and contain at least 1 number.
+                            </small>
+                            <span id="strengthText">Password strength</span>
+                        </div>
+                        <small class="field-error" id="passwordError"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <div class="input-wrapper">
+                            <input type="password" id="confirmPassword" placeholder="Re-enter your password"
+                                autocomplete="new-password">
+                            <button type="button" class="password-toggle" data-target="confirmPassword">
+                                Show
+                            </button>
+                        </div>
+                        <small class="field-error" id="confirmError"></small>
+                    </div>
+                    <p id="registerSuccess" class="success-message"></p>
+                    <button type="submit" class="primary-btn" id="registerBtn">
+                        <span>Create Account</span>
+                        <span class="btn-arrow">→</span>
+                    </button>
+                </form>
+                <p class="switch-text">
+                    Already have an account?
+                    <a href="login.html">Sign in</a>
+                </p>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

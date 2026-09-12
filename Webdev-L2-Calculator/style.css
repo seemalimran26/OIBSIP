@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:
+    radial-gradient(circle at top left, #34345a, transparent 40%),
+    radial-gradient(circle at bottom right, #25254a, transparent 40%), #101018;
+}
+
+/* Calculator */
+.calculator {
+  width: 340px;
+  padding: 28px;
+  border-radius: 28px;
+  background: rgba(30, 30, 47, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* Heading */
+h1 {
+  margin: 0 0 22px;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-align: left;
+}
+
+/* Display */
+input[type="text"] {
+  width: 100%;
+  height: 82px;
+  margin-bottom: 22px;
+  padding: 0 18px;
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 18px;
+  outline: none;
+
+  background: #151520;
+  color: #ffffff;
+
+  font-size: 32px;
+  font-weight: 500;
+  text-align: right;
+
+  box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.25);
+}
+
+/* Buttons grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+/* General buttons */
+button {
+  height: 58px;
+  width: 100%;
+
+  border: none;
+  border-radius: 16px;
+
+  background: #29293b;
+  color: #ffffff;
+
+  font-size: 18px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.15s ease,
+    background 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+button:hover {
+  background: #35354a;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: scale(0.94);
+}
+
+/* AC button */
+.clear {
+  background: #3b2d3d;
+  color: #ff8fa3;
+}
+
+.clear:hover {
+  background: #493646;
+}
+
+/* Backspace */
+.backspace {
+  background: #29293b;
+  color: #b9b9ff;
+  font-size: 22px;
+}
+
+.backspace:hover {
+  background: #38384d;
+}
+
+/* Operators */
+button[data-value="+"],
+button[data-value="-"],
+button[data-value="*"],
+button[data-value="/"] {
+  background: #34345a;
+  color: #aaaaff;
+  font-size: 21px;
+}
+
+button[data-value="+"]:hover,
+button[data-value="-"]:hover,
+button[data-value="*"]:hover,
+button[data-value="/"]:hover {
+  background: #424270;
+}
+
+/* Equal button */
+.equals {
+  grid-column: span 3;
+
+  background: #667eea;
+  color: white;
+
+  font-size: 21px;
+  font-weight: 600;
+
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.25);
+}
+
+.equals:hover {
+  background: #7489ee;
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.35);
+}
+
+/* Mobile */
+@media (max-width: 400px) {
+  .calculator {
+    width: calc(100% - 30px);
+    padding: 22px;
+  }
+
+  button {
+    height: 54px;
+  }
+
+  input[type="text"] {
+    height: 75px;
+    font-size: 28px;
+  }
+}

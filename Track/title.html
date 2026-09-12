@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Project Demo | Seemal Imran</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* ================================
+           RESET
+        ================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* ================================
+           BODY
+        ================================= */
+
+        body {
+
+            font-family: "Inter", sans-serif;
+
+            min-height: 100vh;
+
+            background:
+                radial-gradient(circle at 15% 20%,
+                    rgba(108, 99, 255, 0.18),
+                    transparent 32%),
+                radial-gradient(circle at 85% 80%,
+                    rgba(168, 85, 247, 0.16),
+                    transparent 32%),
+                #090b16;
+
+            color: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            overflow: hidden;
+        }
+
+
+        /* ================================
+           MAIN CARD
+        ================================= */
+
+        .title-card {
+
+            width: 100%;
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            position: relative;
+
+            overflow: hidden;
+
+            padding: 30px;
+        }
+
+
+        /* ================================
+           BACKGROUND GRID
+        ================================= */
+
+        .grid {
+
+            position: absolute;
+
+            inset: 0;
+
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.025) 1px,
+                    transparent 1px),
+                linear-gradient(90deg,
+                    rgba(255, 255, 255, 0.025) 1px,
+                    transparent 1px);
+
+            background-size: 55px 55px;
+
+            mask-image:
+                radial-gradient(ellipse at center,
+                    black 30%,
+                    transparent 80%);
+        }
+
+
+        /* ================================
+           GLOW CIRCLES
+        ================================= */
+
+        .circle {
+
+            position: absolute;
+
+            border-radius: 50%;
+
+            filter: blur(90px);
+
+            opacity: 0.35;
+
+            animation: float 7s ease-in-out infinite;
+        }
+
+
+        .circle-one {
+
+            width: 360px;
+            height: 360px;
+
+            background: #6c63ff;
+
+            top: -160px;
+            right: -100px;
+        }
+
+
+        .circle-two {
+
+            width: 320px;
+            height: 320px;
+
+            background: #a855f7;
+
+            bottom: -150px;
+            left: -100px;
+
+            animation-delay: -3s;
+        }
+
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(25px);
+            }
+        }
+
+
+        /* ================================
+           CONTENT
+        ================================= */
+
+        .content {
+
+            position: relative;
+
+            z-index: 2;
+
+            width: 100%;
+            max-width: 850px;
+
+            text-align: center;
+
+            padding: 70px 50px;
+
+            background:
+                rgba(255, 255, 255, 0.035);
+
+            border:
+
+                1px solid rgba(255, 255, 255, 0.09);
+
+            border-radius: 28px;
+
+            backdrop-filter: blur(20px);
+
+            box-shadow:
+
+                0 30px 100px rgba(0, 0, 0, 0.35);
+
+            animation: cardAppear 0.8s ease forwards;
+        }
+
+
+        @keyframes cardAppear {
+
+            from {
+
+                opacity: 0;
+
+                transform:
+                    translateY(20px) scale(.98);
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform:
+                    translateY(0) scale(1);
+            }
+        }
+
+
+        /* ================================
+           TOP BADGE
+        ================================= */
+
+        .badge {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding: 8px 15px;
+
+            border-radius: 50px;
+
+            background:
+                rgba(108, 99, 255, 0.12);
+
+            border:
+                1px solid rgba(139, 131, 255, 0.25);
+
+            color: #aaa4ff;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            letter-spacing: 1.5px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 30px;
+        }
+
+
+        .badge-dot {
+
+            width: 6px;
+            height: 6px;
+
+            border-radius: 50%;
+
+            background: #8b83ff;
+
+            box-shadow:
+                0 0 10px #8b83ff;
+        }
+
+
+        /* ================================
+           NAME
+        ================================= */
+
+        h1 {
+
+            font-size: clamp(48px, 7vw, 76px);
+
+            line-height: 1;
+
+            letter-spacing: -3px;
+
+            font-weight: 800;
+
+            margin-bottom: 20px;
+        }
+
+
+        h1 span {
+
+            background:
+                linear-gradient(135deg,
+                    #8f87ff,
+                    #c084fc);
+
+            -webkit-background-clip: text;
+
+            -webkit-text-fill-color: transparent;
+        }
+
+
+        /* ================================
+           DIVIDER
+        ================================= */
+
+        .line {
+
+            width: 70px;
+
+            height: 3px;
+
+            background:
+                linear-gradient(90deg,
+                    #6c63ff,
+                    #a855f7);
+
+            border-radius: 50px;
+
+            margin: 0 auto 28px;
+
+            box-shadow:
+                0 0 18px rgba(108, 99, 255, .5);
+        }
+
+
+        /* ================================
+           SUBTITLE
+        ================================= */
+
+        .role {
+
+            color: #c9cad5;
+
+            font-size: 18px;
+
+            font-weight: 500;
+
+            margin-bottom: 35px;
+        }
+
+
+        .role span {
+
+            color: #8f87ff;
+
+            font-weight: 700;
+        }
+
+
+        /* ================================
+           PROJECT INFO
+        ================================= */
+
+        .project-info {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 14px;
+
+            flex-wrap: wrap;
+        }
+
+
+        .info-card {
+
+            min-width: 210px;
+
+            padding: 17px 22px;
+
+            text-align: left;
+
+            background:
+                rgba(255, 255, 255, 0.045);
+
+            border:
+                1px solid rgba(255, 255, 255, 0.08);
+
+            border-radius: 14px;
+
+            transition: .25s ease;
+        }
+
+
+        .info-card:hover {
+
+            transform: translateY(-4px);
+
+            background:
+                rgba(255, 255, 255, 0.07);
+
+            border-color:
+                rgba(139, 131, 255, .3);
+        }
+
+
+        .info-label {
+
+            display: block;
+
+            color: #777b8d;
+
+            font-size: 9px;
+
+            font-weight: 700;
+
+            letter-spacing: 1.5px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 7px;
+        }
+
+
+        .info-value {
+
+            color: #f3f3f7;
+
+            font-size: 13px;
+
+            font-weight: 600;
+        }
+
+
+        /* ================================
+           FOOTER
+        ================================= */
+
+        .footer {
+
+            margin-top: 38px;
+
+            color: #555968;
+
+            font-size: 10px;
+
+            letter-spacing: .5px;
+        }
+
+
+        /* ================================
+           RESPONSIVE
+        ================================= */
+
+        @media (max-width: 600px) {
+
+            .title-card {
+
+                padding: 18px;
+            }
+
+
+            .content {
+
+                padding: 50px 22px;
+
+                border-radius: 22px;
+            }
+
+
+            h1 {
+
+                font-size: 48px;
+
+                letter-spacing: -2px;
+            }
+
+
+            .role {
+
+                font-size: 15px;
+
+                line-height: 1.6;
+            }
+
+
+            .project-info {
+
+                flex-direction: column;
+            }
+
+
+            .info-card {
+
+                width: 100%;
+
+                min-width: 0;
+
+                text-align: center;
+            }
+
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <section class="title-card">
+
+        <!-- Background -->
+        <div class="grid"></div>
+
+        <div class="circle circle-one"></div>
+
+        <div class="circle circle-two"></div>
+
+
+        <!-- Main Content -->
+
+        <div class="content">
+
+
+            <!-- Badge -->
+
+            <div class="badge">
+
+                <span class="badge-dot"></span>
+
+                Project Demo
+
+            </div>
+
+
+            <!-- Name -->
+
+            <h1>
+
+                Seemal
+                <span>Imran</span>
+
+            </h1>
+
+
+            <!-- Divider -->
+
+            <div class="line"></div>
+
+
+            <!-- Track -->
+
+            <p class="role">
+
+                Assigned Track:
+                <span>Web Development</span>
+
+            </p>
+
+
+            <!-- Project Information -->
+
+            <div class="project-info">
+
+
+                <div class="info-card">
+
+                    <span class="info-label">
+                        Task
+                    </span>
+
+                    <span class="info-value">
+                        Temperature Converter App
+                    </span>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <span class="info-label">
+                        Technology
+                    </span>
+
+                    <span class="info-value">
+                        HTML • CSS • JS
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- Footer -->
+
+            <p class="footer">
+
+                Designed & developed by Seemal Imran
+
+            </p>
+
+
+        </div>
+
+    </section>
+
+
+</body>
+
+</html>

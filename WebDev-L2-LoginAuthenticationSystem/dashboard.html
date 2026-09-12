@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Authify</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body class="dashboard-page">
+    <div class="dashboard-layout">
+        <!-- =========================
+             SIDEBAR
+        ========================== -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-icon">A</div>
+                <span>Authify</span>
+            </div>
+            <nav>
+                <a href="#" class="nav-item active">
+                    Dashboard
+                </a>
+                <a href="#" class="nav-item">
+                    Profile
+                </a>
+                <a href="#" class="nav-item">
+                    Settings
+                </a>
+            </nav>
+            <div class="sidebar-bottom">
+                <button id="logoutBtn" class="logout-btn">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Logout</span>
+                </button>
+            </div>
+        </aside>
+        <!-- =========================
+             MAIN DASHBOARD
+        ========================== -->
+        <main class="dashboard-main">
+            <!-- Header -->
+            <header class="dashboard-header">
+                <div>
+                    <p class="header-label">
+                        OVERVIEW
+                    </p>
+                    <h1>
+                        Dashboard
+                    </h1>
+                </div>
+                <div class="header-user">
+                    <div class="avatar" id="userAvatar">
+                        U
+                    </div>
+                    <div class="header-user-info">
+                        <strong id="headerUsername">
+                            User
+                        </strong>
+                        <span>
+                            Online
+                        </span>
+                    </div>
+                </div>
+            </header>
+            <!-- =========================
+                 WELCOME CARD
+            ========================== -->
+            <section class="welcome-card">
+                <div>
+                    <span class="welcome-label">
+                        WELCOME BACK
+                    </span>
+                    <h2>
+                        Hello,
+                        <span id="userDisplay">User</span>!
+                    </h2>
+                    <p>
+                        You're successfully logged in.
+                        Here's an overview of your account.
+                    </p>
+                </div>
+            </section>
+            <!-- =========================
+                 STATISTICS
+            ========================== -->
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <div>
+                        <span>
+                            Total Sessions
+                        </span>
+                        <strong id="sessionCount">
+                            1
+                        </strong>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div>
+                        <span>
+                            Account Status
+                        </span>
+                        <strong>
+                            Active
+                        </strong>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div>
+                        <span>
+                            Security
+                        </span>
+                        <strong>
+                            Protected
+                        </strong>
+                    </div>
+                </div>
+            </section>
+            <!-- =========================
+                 CONTENT
+            ========================== -->
+            <section class="dashboard-grid">
+                <!-- Recent Activity -->
+                <div class="content-card">
+                    <div class="card-heading">
+                        <div>
+                            <h3>
+                                Recent Activity
+                            </h3>
+                            <p>
+                                Your latest account activity
+                            </p>
+                        </div>
+                    </div>
+                    <div class="activity">
+                        <div>
+                            <strong>
+                                Successful login
+                            </strong>
+                            <p>
+                                You logged into your account.
+                            </p>
+                        </div>
+                        <span class="activity-time">
+                            Now
+                        </span>
+                    </div>
+                    <div class="activity">
+                        <div>
+                            <strong>
+                                Account verified
+                            </strong>
+                            <p>
+                                Your account is active.
+                            </p>
+                        </div>
+                        <span class="activity-time">
+                            Today
+                        </span>
+                    </div>
+                </div>
+                <!-- Account -->
+                <div class="content-card account-card">
+                    <div class="card-heading">
+                        <div>
+                            <h3>
+                                Account
+                            </h3>
+                            <p>
+                                Your account information
+                            </p>
+                        </div>
+                    </div>
+                    <div class="account-info">
+                        <div class="account-avatar" id="accountAvatar">
+                            U
+                        </div>
+                        <div>
+                            <strong id="accountUsername">
+                                User
+                            </strong>
+                            <span id="accountEmail">
+                                Account member
+                            </span>
+                        </div>
+                    </div>
+                    <div class="account-status">
+                        Account Active
+                    </div>
+                </div>
+            </section>
+            <!-- =========================
+                 FOOTER
+            ========================== -->
+            <footer class="dashboard-footer">
+                Authify Dashboard • Built with HTML, CSS & JavaScript
+            </footer>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

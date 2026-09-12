@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do Web App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="todo-app">
+            <h2>
+                To-Do Web App
+                <img src="icon.webp" alt="To-Do Icon">
+            </h2>
+            <!-- Add Task -->
+            <div class="row">
+                <input type="text" id="input-box" placeholder="Enter a new task..." maxlength="100">
+                <button id="add-btn" onclick="addTask()">Add Task</button>
+            </div>
+            <!-- Pending Tasks -->
+            <div class="task-section">
+                <div class="section-title">
+                    <h3>Pending Tasks</h3>
+                    <span id="pending-count">0 pending</span>
+                </div>
+                <ul id="pending-list"></ul>
+                <p class="empty-message" id="pending-empty">
+                    No pending tasks. You're all caught up!
+                </p>
+            </div>
+            <!-- Completed Tasks -->
+            <div class="task-section completed-section">
+                <div class="section-title">
+                    <h3>Completed Tasks</h3>
+                    <span id="completed-count">0 completed</span>
+                </div>
+                <ul id="completed-list"></ul>
+                <p class="empty-message" id="completed-empty">
+                    No completed tasks yet.
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

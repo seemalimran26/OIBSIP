@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temperature Converter</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <div class="page">
+    <header>
+      <h1>Temperature Converter</h1>
+      <p>Enter a value in any scale and read the equivalent in Celsius, Fahrenheit, and Kelvin. The gauge on the left
+        tracks where that reading falls against all three scales at once.</p>
+    </header>
+
+    <div class="layout">
+      <div class="gauge-panel">
+        <svg viewBox="0 0 220 460" role="img" aria-label="Thermometer gauge showing the current reading">
+          <!-- Scale column headings -->
+          <text x="14" y="26" class="scale-heading">°C</text>
+          <text x="148" y="26" class="scale-heading">°F</text>
+          <text x="188" y="26" class="scale-heading">K</text>
+
+          <!-- Gridlines + tick labels, generated for -40..60C in steps of 20 -->
+          <g id="ticks"></g>
+
+          <!-- Glass tube -->
+          <rect class="tube-glass" x="96" y="30" width="28" height="352" rx="14" />
+          <circle class="bulb-glass" cx="110" cy="400" r="36" />
+
+          <!-- Mercury -->
+          <rect id="mercury-fill" x="99" y="380" width="22" height="0" fill="#33465a" />
+          <circle id="bulb-fill" cx="110" cy="400" r="32" fill="#33465a" />
+
+          <!-- Moving marker -->
+          <g id="marker" transform="translate(0,380)">
+            <polygon points="128,0 140,-6 140,6" fill="var(--cold)" />
+          </g>
+        </svg>
+      </div>
+
+      <div class="form-panel">
+        <div class="field">
+          <label for="temperature">Value</label>
+          <input type="number" id="temperature" placeholder="e.g. 21" inputmode="decimal">
+        </div>
+        <div class="field">
+          <label for="unit">Input unit</label>
+          <select id="unit">
+            <option value="celsius">Celsius</option>
+            <option value="fahrenheit">Fahrenheit</option>
+            <option value="kelvin">Kelvin</option>
+          </select>
+        </div>
+        <button id="convert-btn" type="button">Convert</button>
+        <p id="error-message" role="alert" aria-live="polite"></p>
+
+        <div class="results">
+          <h2>Converted temperatures</h2>
+          <div class="readout-row">
+            <div class="readout">
+              <span>Celsius</span>
+              <strong id="celsius-result">--</strong>
+            </div>
+            <div class="readout">
+              <span>Fahrenheit</span>
+              <strong id="fahrenheit-result">--</strong>
+            </div>
+            <div class="readout">
+              <span>Kelvin</span>
+              <strong id="kelvin-result">--</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+
+</body>
+
+</html>

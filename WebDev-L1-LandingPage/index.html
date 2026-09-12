@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>xLander</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <header class="site-nav">
+    <div class="wrap">
+
+      <a class="brand" href="#top">xLander</a>
+
+      <!-- CSS-only mobile menu -->
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+      <label for="menu-toggle" class="nav-toggle" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </label>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#top">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">For makers and small teams</p>
+        <h1>Ship a landing page before your coffee gets cold.</h1>
+        <p class="lead">xLander gives you a fast, no-nonsense way to design, host, and publish pages that convert — no
+          developer required.</p>
+        <div class="hero-actions">
+          <a href="#pricing" class="btn btn-primary">Start building free</a>
+          <a href="#how-it-works" class="btn btn-ghost">See how it works</a>
+        </div>
+      </div>
+
+      <div class="mock" aria-hidden="true">
+        <div class="mock-bar"><span></span><span></span><span></span></div>
+        <div class="mock-body">
+          <div class="mock-block mock-nav"></div>
+          <div class="mock-block mock-hero"></div>
+          <div class="mock-block mock-line med"></div>
+          <div class="mock-block mock-line short"></div>
+          <div class="mock-grid">
+            <div class="mock-block mock-card"></div>
+            <div class="mock-block mock-card"></div>
+            <div class="mock-block mock-card"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features" id="features">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Features</p>
+        <h2>Everything you need to launch</h2>
+        <p>Start from a template or a blank canvas — either way, the pieces you need are already in place.</p>
+      </div>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <i class="fa-solid fa-layer-group"></i>
+          <h3>Drag-and-drop sections</h3>
+          <p>Rearrange blocks freely without touching a line of code.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fa-solid fa-rocket"></i>
+          <h3>One-click publishing</h3>
+          <p>Push changes live in seconds, with instant rollback if needed.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fa-solid fa-globe"></i>
+          <h3>Custom domains</h3>
+          <p>Connect a domain you already own, free SSL included.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fa-solid fa-chart-line"></i>
+          <h3>Built-in analytics</h3>
+          <p>See visits, sources, and signups without adding a script.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="process" id="how-it-works">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Process</p>
+        <h2>From idea to live page in three steps</h2>
+      </div>
+      <div class="process-steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h3>Pick a starting point</h3>
+          <p>Choose a template shaped for your goal, or start from a blank page.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h3>Customize the content</h3>
+          <p>Swap in your own words, images, and colors — no design experience needed.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h3>Publish, then measure</h3>
+          <p>Go live on your domain and track visits and signups from day one.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing" id="pricing">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Pricing</p>
+        <h2>Simple pricing, no surprises</h2>
+        <p>Start for free. Upgrade only once you need a custom domain and analytics.</p>
+      </div>
+      <div class="price-grid">
+        <div class="price-card">
+          <h3>Starter</h3>
+          <p class="price-amount">$0<span> / month</span></p>
+          <ul>
+            <li><i class="fa-solid fa-check"></i>1 published page</li>
+            <li><i class="fa-solid fa-check"></i>xLander subdomain</li>
+            <li><i class="fa-solid fa-check"></i>Core sections library</li>
+          </ul>
+          <a href="#" class="btn btn-ghost">Start free</a>
+        </div>
+        <div class="price-card is-highlight">
+          <h3>Pro</h3>
+          <p class="price-amount">$15<span> / month</span></p>
+          <ul>
+            <li><i class="fa-solid fa-check"></i>Unlimited pages</li>
+            <li><i class="fa-solid fa-check"></i>Custom domain + SSL</li>
+            <li><i class="fa-solid fa-check"></i>Built-in analytics</li>
+          </ul>
+          <a href="#" class="btn btn-primary">Choose Pro</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="contact">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>xLander</h4>
+          <p>A fast, no-nonsense way for makers and small teams to design and publish landing pages.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Product</h5>
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how-it-works">How it works</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <ul>
+            <li><a href="mailto:hello@xlander.example">hello@xlander.example</a></li>
+            <li><a href="tel:+10000000000">+92 (000) 000-0000</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 xLander. All rights reserved.</p>
+        <p>Build beautiful, high-converting landing pages with xLander.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
